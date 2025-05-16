@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(29, 28, 16);
+    background-color: rgb(8, 0, 0);
 }
 
 .scale-wrapper {
@@ -24,7 +24,7 @@ body{
 #box1{
     width: 700px;
     height: 1000px;
-    background-color: rgb(32, 34, 59);
+    background-color: #123b28;
     border: 2px solid transparent;
     border-radius: 30px;
     box-shadow: 1px 1px 50px rgb(0, 1, 19);
@@ -35,7 +35,7 @@ body{
     height: 500px;
     margin-left: 2.6cm;
     margin-top: 2cm;
-    border: 3px solid rgb(118, 144, 173);
+    border: 5px solid #228564;
     border-radius: 30px;
     box-shadow: 1px 1px 20px rgb(29, 29, 29);
 }
@@ -56,7 +56,7 @@ body{
     width: 500px;
     height: 20px;
     background-color: #9c9c9c56;
-    border: 3px solid rgb(118, 144, 173);
+    border: 3px solid #228564;
     border-radius: 10px;
     overflow: hidden;
     margin: 40px auto;
@@ -65,7 +65,7 @@ body{
 #progressBar {
     height: 100%;
     width: 0%;
-    background-color: #7e8cdf;
+    background-color: #081d24;
     transition: width 0.1s linear;
 }
 
@@ -83,10 +83,10 @@ body{
     cursor: pointer;
 }
 #playButton:hover{
-    background-color: rgba(0, 0, 0, 0.253);
+    background-color: rgba(255, 255, 255, 0.13);
 }
 #playButton:active{
-    background-color: #212749;
+    background-color: #6464641c;
 }
 
 .for-back{
@@ -117,10 +117,10 @@ body{
 }
 
 .for-back:hover{
-    background-color: rgba(0, 0, 0, 0.253);
+    background-color: rgba(255, 255, 255, 0.068)
 }
 .for-back:active{
-    background-color: #212749;
+    background-color: #6464641c;
 }
 
 .skip{
@@ -147,11 +147,11 @@ body{
 }
 
 .skip:hover{
-    background-color: rgba(58, 59, 44, 0.253);
+    background-color: rgba(104, 104, 104, 0.253);
     opacity: 50;
 }
 .skip:active{
-    background-color: rgba(88, 90, 63, 0.253);
+    background-color: rgba(66, 66, 66, 0.089);
     opacity: 100;
 }
 

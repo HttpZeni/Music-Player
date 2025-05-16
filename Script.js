@@ -10,10 +10,12 @@ const artistText = document.getElementById("artistText");
 const coverHref = document.getElementById("coverHref");
 const reset = document.getElementById("reset");
 const volumeSlider = document.getElementById("volumeSlider");
+const box = document.getElementById("box1");
+const progressContainer = document.getElementById("progressContainer");
 let currentPlayTime = document.getElementById("currentTime");
 let maxTime = document.getElementById("maxTime");
 var cover = document.getElementById("Cover");
-const maxAtSong = 2;
+const maxAtSong = 3;
 let atSong = 1;
 let isPlaying = false;
 
@@ -61,37 +63,93 @@ forward.onclick = function(){
 }
 
 nextSong.onclick = function(){
-    atSong++;
+    if(atSong >= maxAtSong){
+        atSong = 1;
+    }  
+    else{
+        atSong++;
+    }
     audio.pause();
+    isPlaying = false;
     audio.currentTime = 0;
+    playButton.textContent = "▶";
     playButton.textContent = "▶";
 
     if(atSong == 2){
+        box.style.backgroundColor = "#330419";
+        cover.style.border = "5px solid #87053f";
+        progressContainer.style.border = "5px solid #87053f";
         audio.src = "Audio/h4rtbrkr - i hate you.mp3"
         cover.src = "Covers/I Hate You.jpeg";
         songText.textContent = "I Hate You";
         artistText.textContent = "h4rtbrkr"
         coverHref.href = "https://open.spotify.com/intl-de/track/4Iwq23SVTkRJbWUdBXfUv9";
     }
-    if(atSong > maxAtSong){
-        atSong = maxAtSong;
-    }    
-}
-
-backSong.onclick = function(){
-    atSong--;
-    audio.pause();
-    audio.currentTime = 0;
-    playButton.textContent = "▶";
-    if(atSong == 1){
+    else if (atSong == 3){
+        box.style.backgroundColor = "#00052b";
+        cover.style.border = "5px solid #2c3685";
+        progressContainer.style.border = "5px solid #2c3685";
+        audio.src = "Audio/Alex G - Not Anywhere.mp3"
+        cover.src = "Covers/alexgoffline.jpeg";
+        songText.textContent = "Not Anywhere";
+        artistText.textContent = "Alex G"
+        coverHref.href = "https://open.spotify.com/intl-de/track/7Kxir3VuFzvFDDsrUXuISf?si=0c262145240643ba";
+    }
+    else if(atSong == 1){
+        box.style.backgroundColor = "#123b28";
+        cover.style.border = "5px solid #003d29";
+        progressContainer.style.border = "5px solid #003d29";
         audio.src = "Audio/Hoe Cakes.mp3";
         cover.src = "Covers/Hoe Cakes.jpg";
         songText.textContent = "Hoe Cakes";
         artistText.textContent = "MF DOOM"
         coverHref.href = "https://open.spotify.com/intl-de/track/4b82tXj35SycILuILcgBQ6";
     }
+
+  
+    
+    console.log(atSong);
+}
+
+backSong.onclick = function(){
+    atSong--;
     if(atSong < 1){
-        atSong = 1;
+        atSong = maxAtSong;
+    }
+    audio.pause();
+    isPlaying = false;
+    audio.currentTime = 0;
+    playButton.textContent = "▶";
+
+    if(atSong == 1){
+        box.style.backgroundColor = "#123b28";
+        cover.style.border = "5px solid #003d29";
+        progressContainer.style.border = "5px solid #003d29";
+        audio.src = "Audio/Hoe Cakes.mp3";
+        cover.src = "Covers/Hoe Cakes.jpg";
+        songText.textContent = "Hoe Cakes";
+        artistText.textContent = "MF DOOM"
+        coverHref.href = "https://open.spotify.com/intl-de/track/4b82tXj35SycILuILcgBQ6";
+    }
+        if(atSong == 2){
+        box.style.backgroundColor = "#330419";
+        cover.style.border = "5px solid #87053f";
+        progressContainer.style.border = "5px solid #87053f";
+        audio.src = "Audio/h4rtbrkr - i hate you.mp3"
+        cover.src = "Covers/I Hate You.jpeg";
+        songText.textContent = "I Hate You";
+        artistText.textContent = "h4rtbrkr"
+        coverHref.href = "https://open.spotify.com/intl-de/track/4Iwq23SVTkRJbWUdBXfUv9";
+    }
+    else if (atSong == 3){
+        box.style.backgroundColor = "#00052b";
+        cover.style.border = "5px solid #2c3685";
+        progressContainer.style.border = "5px solid #2c3685";
+        audio.src = "Audio/Alex G - Not Anywhere.mp3"
+        cover.src = "Covers/alexgoffline.jpeg";
+        songText.textContent = "Not Anywhere";
+        artistText.textContent = "Alex G"
+        coverHref.href = "https://open.spotify.com/intl-de/track/7Kxir3VuFzvFDDsrUXuISf?si=0c262145240643ba";
     }
 }
 
