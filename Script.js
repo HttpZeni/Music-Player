@@ -8,6 +8,7 @@ const nextSong = document.getElementById("nextSong");
 const songText = document.getElementById("songText");
 const artistText = document.getElementById("artistText");
 const coverHref = document.getElementById("coverHref");
+const reset = document.getElementById("reset");
 let currentPlayTime = document.getElementById("currentTime");
 let maxTime = document.getElementById("maxTime");
 var cover = document.getElementById("Cover");
@@ -87,4 +88,8 @@ backSong.onclick = function(){
     if(atSong < 1){
         atSong = 1;
     }
+}
+
+reset.onclick = function(){
+    audio.currentTime = 0;
 }
