@@ -149,3 +149,18 @@ body{
     background-color: rgba(88, 90, 63, 0.253);
     opacity: 100;
 }
+
+.playTime{
+    font-size: 30px;
+    color: black;
+}
+
+#currentTime{
+    margin-top: -2.35em;
+    margin-left: 20px;
+}
+
+#maxTime{
+    margin-top: -2.5em;
+    margin-left: 16.6cm;
+}

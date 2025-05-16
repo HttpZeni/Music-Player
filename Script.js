@@ -8,14 +8,29 @@ const nextSong = document.getElementById("nextSong");
 const songText = document.getElementById("songText");
 const artistText = document.getElementById("artistText");
 const coverHref = document.getElementById("coverHref");
+let currentPlayTime = document.getElementById("currentTime");
+let maxTime = document.getElementById("maxTime");
 var cover = document.getElementById("Cover");
 const maxAtSong = 2;
 let atSong = 1;
 let isPlaying = false;
 
+function formatTime(timeInSeconds) {
+    const minutes = Math.floor(timeInSeconds / 60);
+    const seconds = Math.floor(timeInSeconds % 60);
+    return `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
+}
+  
+audio.onloadedmetadata = function() {
+    maxTime.textContent = formatTime(audio.duration);
+    currentPlayTime.textContent = formatTime(audio.currentTime);
+    progressBar.style.width = "0%"; 
+};
+
 audio.ontimeupdate = function(){
     const percent = (audio.currentTime / audio.duration) * 100;
     progressBar.style.width = percent + "%";
+    currentPlayTime.textContent = formatTime(audio.currentTime);
 };
 
 playButton.onclick = function(){
