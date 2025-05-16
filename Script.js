@@ -16,7 +16,7 @@ const theme = document.getElementById("theme");
 let currentPlayTime = document.getElementById("currentTime");
 let maxTime = document.getElementById("maxTime");
 var cover = document.getElementById("Cover");
-const maxAtSong = 3;
+const maxAtSong = 4;
 let atSong = 1;
 let isDark = true;
 let isPlaying = false;
@@ -110,6 +110,16 @@ nextSong.onclick = function(){
         artistText.textContent = "Alex G"
         coverHref.href = "https://open.spotify.com/intl-de/track/7Kxir3VuFzvFDDsrUXuISf?si=0c262145240643ba";
     }
+    else if (atSong == 4){
+        box.style.backgroundColor = "#611033";
+        cover.style.border = "5px solid #bf0a5e";
+        progressContainer.style.border = "5px solid #bf0a5e";
+        audio.src = "Audio/awfultune - i met sarah in the bathroom (prod. kazuyo).mp3"
+        cover.src = "Covers/i met sarah in the bathroom.jpg";
+        songText.textContent = "i met sarah in the bathroom";
+        artistText.textContent = "​awfultune"
+        coverHref.href = "https://open.spotify.com/track/3yXoqAiLWYQi5oNJN2MA4l";
+    }
     else if(atSong == 1){
         box.style.backgroundColor = "#123b28";
         cover.style.border = "5px solid #003d29";
@@ -165,6 +175,16 @@ backSong.onclick = function(){
         songText.textContent = "Not Anywhere";
         artistText.textContent = "Alex G"
         coverHref.href = "https://open.spotify.com/intl-de/track/7Kxir3VuFzvFDDsrUXuISf?si=0c262145240643ba";
+    }
+    else if (atSong == 4){
+        box.style.backgroundColor = "#611033";
+        cover.style.border = "5px solid #bf0a5e";
+        progressContainer.style.border = "5px solid #bf0a5e";
+        audio.src = "Audio/awfultune - i met sarah in the bathroom (prod. kazuyo).mp3"
+        cover.src = "Covers/i met sarah in the bathroom.jpg";
+        songText.textContent = "i met sarah in the bathroom";
+        artistText.textContent = "​awfultune"
+        coverHref.href = "https://open.spotify.com/track/3yXoqAiLWYQi5oNJN2MA4l";
     }
 }
 
