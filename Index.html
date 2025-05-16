@@ -6,6 +6,7 @@
     
     <title>Music Player</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
@@ -30,7 +31,15 @@
                 <button id="backward" class="for-back">◁</button>
                 <button id="forward" class="for-back">▷</button>
                 <button id="reset" class="for-back">⭯</button>
-    
+                
+                <div class="volume-control">
+                <button id="volumeButton" class="for-back">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+                </div>
+
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
                 <audio id="audio" src="Audio/Hoe Cakes.mp3"></audio>
 
                 <button id="backSong" class="skip">‹</button>

@@ -35,7 +35,7 @@ body{
     height: 500px;
     margin-left: 2.6cm;
     margin-top: 2cm;
-    border: 2px solid transparent;
+    border: 3px solid rgb(118, 144, 173);
     border-radius: 30px;
     box-shadow: 1px 1px 20px rgb(29, 29, 29);
 }
@@ -168,4 +168,32 @@ body{
 #maxTime{
     margin-top: -2.5em;
     margin-left: 16.6cm;
+}
+
+.volume-control {
+  position: relative;
+  display: inline-block;
+}
+
+#volumeButton{
+    position: absolute;
+    margin-top: -1.7em;
+    margin-left: 13em;
+    font-size: 45px;
+}
+
+#volumeSlider {
+  position: absolute;
+  margin-left: 16.5cm;
+  margin-top: -10em;
+  transform: translateX(-50%) rotate(-90deg);
+  width: 100px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.volume-control:hover #volumeSlider {
+  opacity: 1;
+  pointer-events: auto;
 }

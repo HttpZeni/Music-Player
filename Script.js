@@ -9,6 +9,7 @@ const songText = document.getElementById("songText");
 const artistText = document.getElementById("artistText");
 const coverHref = document.getElementById("coverHref");
 const reset = document.getElementById("reset");
+const volumeSlider = document.getElementById("volumeSlider");
 let currentPlayTime = document.getElementById("currentTime");
 let maxTime = document.getElementById("maxTime");
 var cover = document.getElementById("Cover");
@@ -26,6 +27,10 @@ audio.onloadedmetadata = function() {
     maxTime.textContent = formatTime(audio.duration);
     currentPlayTime.textContent = formatTime(audio.currentTime);
     progressBar.style.width = "0%"; 
+};
+
+volumeSlider.oninput = function () {
+    audio.volume = this.value;
 };
 
 audio.ontimeupdate = function(){
