@@ -12,11 +12,13 @@ const reset = document.getElementById("reset");
 const volumeSlider = document.getElementById("volumeSlider");
 const box = document.getElementById("box1");
 const progressContainer = document.getElementById("progressContainer");
+const theme = document.getElementById("theme");
 let currentPlayTime = document.getElementById("currentTime");
 let maxTime = document.getElementById("maxTime");
 var cover = document.getElementById("Cover");
 const maxAtSong = 3;
 let atSong = 1;
+let isDark = true;
 let isPlaying = false;
 
 function formatTime(timeInSeconds) {
@@ -40,6 +42,19 @@ audio.ontimeupdate = function(){
     progressBar.style.width = percent + "%";
     currentPlayTime.textContent = formatTime(audio.currentTime);
 };
+
+theme.onclick = function(){
+    if(isDark){
+        document.body.style.backgroundColor = "#9ea6e8";
+        theme.style.color = "black";
+        isDark = false;
+    }
+    else {
+        document.body.style.backgroundColor = "#04000a";
+        theme.style.color = "white";
+        isDark = true;
+    }
+}
 
 playButton.onclick = function(){
     if(!isPlaying){

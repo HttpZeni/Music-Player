@@ -1,14 +1,35 @@
 body{
-    background-color: rgb(8, 0, 0);
+    background-color: #04000a;
+}
+
+#theme{
+    display: flex;
+    text-align: center;
+    font-size: 50px;
+    width: 70px;
+    height: 70px;
+    padding-left: 20px;
+    padding-bottom: 50px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+#theme:hover{
+    background-color: rgba(255, 255, 255, 0.089);
+}
+#theme:active{
+    background-color: rgba(255, 255, 255, 0.24);
 }
 
 .scale-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* damit's wirklich in der Mitte hängt */
-    transform: scale(0.5); /* z.B. auf 70% verkleinert */
-    transform-origin: center center; /* damit’s schön skaliert */
+    height: 100vh;
+    transform: scale(0.5);
+    transform-origin: center center;
 }
 
 .container{
@@ -18,7 +39,7 @@ body{
     width: 1100px;
     height: 1300px;
     margin: auto;
-    margin-top: -6cm;
+    margin-top: -8cm;
 }
 
 #box1{
