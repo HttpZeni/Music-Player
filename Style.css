@@ -1,0 +1,151 @@
+body{
+    background-color: rgb(29, 28, 16);
+}
+
+.scale-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* damit's wirklich in der Mitte hängt */
+    transform: scale(0.5); /* z.B. auf 70% verkleinert */
+    transform-origin: center center; /* damit’s schön skaliert */
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1100px;
+    height: 1300px;
+    margin: auto;
+    margin-top: -6cm;
+}
+
+#box1{
+    width: 700px;
+    height: 1000px;
+    background-color: rgb(32, 34, 59);
+    border: 2px solid transparent;
+    border-radius: 30px;
+    box-shadow: 1px 1px 50px rgb(0, 1, 19);
+}
+
+#Cover{
+    width: 500px;
+    height: 500px;
+    margin-left: 2.6cm;
+    margin-top: 2cm;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    box-shadow: 1px 1px 20px rgb(29, 29, 29);
+}
+
+#songText{
+    text-align: center;
+    font-size: 45px;
+    margin-top: 40px;
+}
+
+#artistText{
+    text-align: center;
+    font-size: 30px;
+    margin-top: -0.5cm;
+}
+
+#progressContainer {
+    width: 500px;
+    height: 20px;
+    background-color: #9c9c9c56;
+    border: 3px solid rgb(118, 144, 173);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 40px auto;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background-color: #7e8cdf;
+    transition: width 0.1s linear;
+}
+
+#playButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    font-size: 45px;
+    background-color: transparent;
+    border: none;
+    margin-left: 8.3cm;
+    margin-top: 1.8cm;
+    cursor: pointer;
+}
+#playButton:hover{
+    background-color: rgba(0, 0, 0, 0.253);
+}
+#playButton:active{
+    background-color: #212749;
+}
+
+.for-back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    font-size: 55px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#backward{
+    margin-left: 2.8em;
+    margin-top: -1.2em;
+}
+
+#forward{
+    margin-left: 8.5em;
+    margin-top: -1.25em;
+}
+
+.for-back:hover{
+    background-color: rgba(0, 0, 0, 0.253);
+}
+.for-back:active{
+    background-color: #212749;
+}
+
+.skip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 800px;
+    font-size: 100px; 
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: transparent;
+    opacity: 0;
+}
+
+#backSong{
+    margin-top: -8.5em;
+    margin-left: -0.8em;
+}
+
+#nextSong{
+    margin-top: -7.9em;
+    margin-left: 7em;
+}
+
+.skip:hover{
+    background-color: rgba(58, 59, 44, 0.253);
+    opacity: 50;
+}
+.skip:active{
+    background-color: rgba(88, 90, 63, 0.253);
+    opacity: 100;
+}

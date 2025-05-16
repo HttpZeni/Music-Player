@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    
+    <title>Music Player</title>
+
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <div class="scale-wrapper">
+        <div class="container">
+            <div id="box1">
+                <a id="coverHref" href="https://open.spotify.com/intl-de/track/4b82tXj35SycILuILcgBQ6" target="_blank">
+                    <img src="Covers/Hoe Cakes.jpg" alt="Music Cover" id="Cover">
+                </a>
+                <h2 id="songText">Hoe Cakes</h2>
+                <h3 id="artistText">MF DOOM</h3>
+    
+                <div id="progressContainer">
+                    <div id="progressBar"></div>
+                </div>
+    
+                <button id="playButton">▶︎</button>
+                <button id="backward" class="for-back">◁</button>
+                <button id="forward" class="for-back">▷</button>
+    
+                <audio id="audio" src="Audio/Hoe Cakes.mp3"></audio>
+
+                <button id="backSong" class="skip">‹</button>
+                <button id="nextSong" class="skip">›</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
