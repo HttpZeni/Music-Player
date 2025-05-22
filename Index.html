@@ -11,9 +11,10 @@
 </head>
 <body>
     <button id="theme">☾</button>
+    <button id="dynamic">∆</button>
     <div class="scale-wrapper">
         <div class="container">
-            <div id="box1">
+            <div class="box1">
                 <a id="coverHref" href="https://open.spotify.com/intl-de/track/4b82tXj35SycILuILcgBQ6" target="_blank">
                     <img src="Covers/Hoe Cakes.jpg" alt="Music Cover" id="Cover">
                 </a>
@@ -27,7 +28,7 @@
                 <h4 id="currentTime" class="playTime">0:00</h4>
                 <h4 id="maxTime" class="playTime">0:00</h4>
 
-                <button id="playButton">▶︎</button>
+                <button id="playButton">▶</button>
                 <button id="backward" class="for-back">◁</button>
                 <button id="forward" class="for-back">▷</button>
                 <button id="reset" class="for-back">⭯</button>
@@ -44,7 +45,11 @@
 
                 <button id="backSong" class="skip">‹</button>
                 <button id="nextSong" class="skip">›</button>
+
+                <button id="onlyVocal">၊၊||၊</button>
+                <button id="onlyInstru">♫</button>
             </div>
+            <script src="TiltScript/vanilla-tilt.min.js"></script>
         </div>
     </div>
     <script src="Script.js"></script>

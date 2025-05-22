@@ -8,6 +8,10 @@ html, body {
   padding: 0;
 }
 
+.js-tilt-glare{
+    border-radius: 15px;
+}
+
 #theme{
     display: flex;
     text-align: center;
@@ -22,10 +26,33 @@ html, body {
     background-color: transparent;
 }
 
+#dynamic{
+    display: flex;
+    text-align: center;
+    font-size: 50px;
+    width: 70px;
+    height: 70px;
+    padding-left: 20px;
+    padding-top: 5px;  
+    color: white;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    margin-left: 1.25em;
+    margin-top: -1.4em;
+}
+
 #theme:hover{
     background-color: rgba(255, 255, 255, 0.089);
 }
 #theme:active{
+    background-color: rgba(255, 255, 255, 0.24);
+}
+
+#dynamic:hover{
+    background-color: rgba(255, 255, 255, 0.089);
+}
+#dynamic:active{
     background-color: rgba(255, 255, 255, 0.24);
 }
 
@@ -48,17 +75,18 @@ html, body {
     margin-top: -8.5cm;
 }
 
-#box1{
+.box1{
     width: 700px;
     height: 1000px;
     background-color: #123b28;
     border: 2px solid transparent;
     border-radius: 30px;
     
-    box-shadow: 1px 1px 50px rgba(82, 82, 82, 0.459);
+    box-shadow: 1px 1px 50px rgba(82, 82, 82, 0.459),
+    inset 0 0 25px rgba(0, 0, 0, 0.459);
 }
 
-#Cover{
+#Cover {
     width: 500px;
     height: 500px;
     margin-left: 2.6cm;
@@ -66,6 +94,14 @@ html, body {
     border: 5px solid #228564;
     border-radius: 30px;
     box-shadow: 1px 1px 20px rgb(29, 29, 29);
+    transition: width 0.5s ease, height 0.5s ease, margin 0.5s ease, box-shadow 0.5s ease;
+}
+#Cover:hover {
+    margin-left: 2.3cm;
+    margin-top: 1.5cm;
+    width: 520px;
+    height: 520px;
+    box-shadow: 1px 1px 25px rgb(29, 29, 29);
 }
 
 #songText{
@@ -112,6 +148,7 @@ html, body {
 }
 #playButton:hover{
     background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 10px;
 }
 #playButton:active{
     background-color: #6464641c;
@@ -145,7 +182,8 @@ html, body {
 }
 
 .for-back:hover{
-    background-color: rgba(255, 255, 255, 0.068)
+    background-color: rgba(255, 255, 255, 0.068);
+    border-radius: 10px;
 }
 .for-back:active{
     background-color: #6464641c;
@@ -224,4 +262,49 @@ html, body {
 .volume-control:hover #volumeSlider {
   opacity: 1;
   pointer-events: auto;
+}
+
+#onlyVocal{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    font-size: 45px;
+    border: 5px solid rgba(0, 0, 0, 0.356);
+    border-radius: 10px;
+    top: -22.5em;
+    color:  white;
+    background-color: rgba(177, 177, 177, 0.151);
+}
+#onlyVocal:hover{
+    width: 80px;
+    height: 80px;
+    top: -23;
+}
+#onlyVocal:active{
+    width: 85px;
+    height: 85px;
+    top: -24;
+    background-color: rgba(177, 177, 177, 0.404);
+}
+#onlyInstru{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    font-size: 45px;
+    border: 5px solid rgba(0, 0, 0, 0.356);
+    border-radius: 10px;
+    top: -22.5em;
+    color:  white;
+    background-color: rgba(177, 177, 177, 0.151);
+}
+#onlyInstru:hover{
+    width: 80px;
+    height: 80px;
+    top: -23;
+}
+#onlyInstru:active{
+    width: 85px;
+    height: 85px;
+    top: -24;
+    background-color: rgba(177, 177, 177, 0.404);
 }
